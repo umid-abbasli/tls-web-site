@@ -30,6 +30,10 @@ nav{
     background-color: transparent !important;
     padding: 40px;
 }
+.navbar-logo img{
+    width: 110px;
+    min-width: 60px;
+}
 .navbar-my-bg{
     width: 100%;
     padding: 15px 0;
@@ -42,23 +46,24 @@ nav{
     width: 100%;
     align-items: center;
   }
+  .nav{
+    justify-content: center;
+  }
   .nav ul{
     display: flex;
     margin: 0;
     padding: 0 !important;
+    justify-content: center;
   }
   .nav ul a{
-    color: #dd3333;
+    color: #fff;
     font-size: 16px;
-    margin: 0 10px; 
+    margin: 0 7px; 
     text-transform: capitalize;
     padding: 0 5px;
     transition: .3s;
     font-weight: 500;
 
-  }
-  .nav ul a:hover{
-    color: #fff;
   }
   .lang-and-button{
     display: flex;
@@ -73,7 +78,8 @@ nav{
   .dropdown span,.dropdown-content p{
     display: flex;
     align-items: center;
-    color: #dd3333;
+    color: #fff;
+    text-transform: uppercase;
     font-size: 18px;
   }
   .dropdown span img,.dropdown-content p img{
@@ -182,16 +188,28 @@ nav{
     height: 100vh;
     object-fit: cover;
 }
+.carousel-item {
+    position: relative !important;
+}
+.carousel-item::before {
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: absolute !important;
+    background-color: rgba(0, 0, 0, 0.312);
+}
 .carousel-caption h5 {
-	font-size: 57px;
-	text-transform: uppercase;
+	font-size: 40px;
+	text-transform: capitalize;
 	letter-spacing: 2px;
-	margin-top: 25px;
+    width: 70%;
+    margin: 25px auto;
+    line-height: 60px;
     padding: 15px 0;
      font-weight: 400;
-    border-bottom-width:10% ;
     font-family: "tlsfont-bold" !important;
     color: #fff;
+    text-align: center;
 }
 .carousel-caption p {
 	width: 100%;
@@ -305,7 +323,7 @@ nav{
 }
 .xidmetlerimiz-cards{
     display: flex;
-    background: url("../img/tls-slide-1-img-1.jpg") center/cover;
+    background: url("../img/DƏMİR-YOLU-DAŞINMASI.jpg") center/cover
 }
 .card-1,.card-2,.card-3,.card-4,.card-5{
     width: 20%;
@@ -438,42 +456,30 @@ nav{
     width: 70%;
     margin: 0 auto;
 }
-.section-referanslar{
+.owl-carousel{
+    padding: 50px 0;
+}
+.ref-1{
+    border: 2px solid silver;
+    padding: 20px 10px;
+    cursor: grab;
+}
+.owl-item img{
+    height: 120px;
+    object-fit: contain;
+}
+.ref-1:focus{
+    cursor: grabbing;
+}
+.owl-item img[class="filtered-img"]{
+   filter: invert(1);
+}
+.owl-dots{
+    display: none !important;
+}
+.ref-cards{
     display: flex;
-    flex-wrap: wrap;
-    padding-top: 50px;
-    justify-content: space-around;
-}
-.section-referanslar img{
-    width: 100px;
-    filter: grayscale(100%);
-}
-.ref-card{
-    margin: 20px 10px ;
-    border: 1px solid silver;
-    border-radius: 2px;
-    padding: 20px;
-    height: 140px;
-    width: 150px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.ref-card:hover img,.ref-card-1:hover img{
-    filter: grayscale(0%);
-}
-.ref-card-1{
-    margin: 40px 10px;
-    height: 140px;
-    width: 150px;
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border-radius: 2px;
-    border: 1px solid silver;
+    justify-content: space-between;
 }
 
 .galery{
@@ -490,63 +496,7 @@ nav{
     text-align: center;
     padding: 0 0 45px 0;
 }
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
 
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    cursor: grab;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-  }
-  .swiper-button-prev{
-    left: 32.6%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
-  .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after{
-    font-size: 22px;
-    font-weight: 600px;
-    color: #000;
-  }
-  .swiper-button-next{
-    right: 32.6%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
-  .swiper-button-next:after, .swiper-rtl .swiper-button-prev:after{
-    font-size: 22px;
-    font-weight: 900px;
-    color: #000;
-  }
   .call-us-bg{
     padding:77px 0 144px 0;
     background-color: #e64c21;
@@ -747,6 +697,7 @@ nav{
 }
 }
 @media only screen and (max-width:1020px){
+
     .footer-content-1{
         display: flex;
         justify-content: space-between;
@@ -867,29 +818,10 @@ nav{
 .sec-2-content p{
     font-size: 17px;
 }
+  .carousel-item{
+        height: 100% !important;
+    }
 
-.swiper-slide img {
-    display: block;
-    width: 80%;
-    height: 300px;
-    object-fit: contain;
-  }
-  .swiper-button-prev{
-    left: 19%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
-  .swiper-button-next{
-    right: 19%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
   .call-us{
     display: inherit;
 }
@@ -1037,16 +969,20 @@ nav{
         left: 1% !important;
         bottom: 2% !important;
     }
+    .carousel-item{
+        height: 100%;
+    }
     .carousel-item img{
         height: inherit;
         object-fit: contain;
+
     }
     
 .carousel-caption h5 {
 	font-size: 28px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-top: 15px;
+    width: 80%;
     padding: 10px 0;
     border-bottom-width:10% ;
 }
@@ -1077,6 +1013,7 @@ nav{
         letter-spacing: 2px;
         margin-top: 0;
         padding: 5px 0;
+        line-height: 30px;
         border-bottom-width:10% ;
     }
     .carousel-caption p {
@@ -1183,29 +1120,6 @@ nav{
     font-size: 16px;
     overflow-wrap: break-word;
 }
-.swiper-slide img {
-    display: block;
-    width: 80%;
-    height: 300px;
-    object-fit: contain;
-    padding: 0 !important;
-  }
-  .swiper-button-prev{
-    left: 5%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
-  .swiper-button-next{
-    right: 5%;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 10px silver;
-  }
   .referanslar-head h2{
     font-size: 25px;
     overflow-wrap: break-word;
