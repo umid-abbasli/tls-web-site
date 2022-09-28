@@ -456,31 +456,7 @@ nav{
     width: 70%;
     margin: 0 auto;
 }
-.owl-carousel{
-    padding: 50px 0;
-}
-.ref-1{
-    border: 2px solid silver;
-    padding: 20px 10px;
-    cursor: grab;
-}
-.owl-item img{
-    height: 120px;
-    object-fit: contain;
-}
-.ref-1:focus{
-    cursor: grabbing;
-}
-.owl-item img[class="filtered-img"]{
-   filter: invert(1);
-}
-.owl-dots{
-    display: none !important;
-}
-.ref-cards{
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .galery{
     padding: 50px 0;
